@@ -99,7 +99,8 @@
               "browserTarget": "E:build:production"
             },
             "development": {
-              "browserTarget": "E:build:development"
+              "browserTarget": "E:build:development",
+              "proxyConfig": "./proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
