@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { Province } from 'src/app/models/taxes.model';
-import { TaxesService } from 'src/app/services/taxes.service';
+import { Province     } from '../../models/taxes.model';
+import { TaxesService } from '../../services/taxes.service';
 
 @Component({
-  selector: 'app-provinces-view',
+  selector: 'app-provinces-view-v1',
   styles: [],
   template: `
     <div class="card">
       <div class="card-header">Provinces</div>
       <div id="provinces-list" class="list-group list-group-flush">
         <a *ngFor="let province of provinces"
-           [routerLink]="'/provinces/' + province.code " 
+           [routerLink]="'/v1/provinces/' + province.code" 
            class="list-group-item list-group-item-action province-item">
           {{ province.province }}
         </a>
@@ -20,7 +20,7 @@ import { TaxesService } from 'src/app/services/taxes.service';
     </div>
   `
 })
-export class ProvincesViewComponent implements OnInit {
+export class ProvincesViewComponent_V1 implements OnInit {
 
   provinces: Province[] = [];
 

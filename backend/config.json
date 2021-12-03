@@ -1,5 +1,5 @@
 {
-  "port": 4040,
+  "port": 0,
   "session": { 
     "secret": "secret",
     "resave": true,

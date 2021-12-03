@@ -32,9 +32,13 @@ module.exports = {
     const where = { code: req.params.code };
     // dao.getTaxByCode(req.params.code, (tax) => {
     Tax.findOne({ where }).then((tax) => {
-      let response = tax || new Error('Tax code not found');
+      let response = tax;
       res.setHeader('Content-Type', 'application/json');
-      res.write(JSON.stringify(response));
+      if (response) {
+        res.write(JSON.stringify(response));
+      } else {
+        res.sendStatus(404);
+      }
       res.end();
     }, console.log);
   }
