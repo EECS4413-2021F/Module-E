@@ -23,8 +23,8 @@ export class InMemoryCache<T> {
     return this.cachedValue ? of(this.cachedValue) : this.cachedObservable;
   }
  
-  static putCache<V>(cacheKey: string, observable: Observable<V>) {
-    (new InMemoryCache<V>(cacheKey, observable));
+  static putCache<V>(cacheKey: string, observable: Observable<V>): InMemoryCache<V> {
+    return (new InMemoryCache<V>(cacheKey, observable));
   }
 
   static getCache<V>(cacheKey: string): InMemoryCache<V> {

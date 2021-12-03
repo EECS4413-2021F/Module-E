@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 
-import { InMemoryCache } from '../models/cache.model';
+import { InMemoryCache } from '../models/in-memory-cache';
 import { Tax } from '../models/taxes.model';
 
 @Injectable({

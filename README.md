@@ -22,6 +22,6 @@
 - Services:
   - [`TaxesService`](examples/taxes-demo/src/app/services/taxes.service.ts)
   - [`SelectedService` for Nested Route](examples/taxes-demo/src/app/services/selected.service.ts)
-- Models:
+- Models & Helper Classes:
   - [`Tax` Model](examples/taxes-demo/src/app/models/taxes.model.ts)
-  - [`InMemoryCache` for `TaxesService`](examples/taxes-demo/src/app/models/cache.model.ts)
+  - [`InMemoryCache` for `TaxesService`](examples/taxes-demo/src/app/models/in-memory-cache.ts)
